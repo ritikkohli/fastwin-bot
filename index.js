@@ -8,7 +8,7 @@ app.get('/run/:no',async function(req,res){
     try{
         const no = req.params.no;
         const url = `http://fastwin.app/lucky/lifafa/id?no=LIFA${no}`;
-        const browser = await puppeteer.launch({headless:'old'});
+        const browser = await puppeteer.launch({headless:true});
 
         const page = await browser.newPage();   
         
